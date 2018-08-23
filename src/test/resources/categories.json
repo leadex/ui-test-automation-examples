@@ -1,0 +1,105 @@
+[
+{
+    "name": "Success tests",
+    "matchedStatuses": ["passed"]
+  },
+ {
+    "name": "Block amount failed", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f01.*"
+  },
+ {
+    "name": "Error occurred while making funds transfer", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f02.*"
+  },
+{
+    "name": "The timeout period has expired. Task has not exist", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f03.*"
+  },
+{
+    "name": "Correct Registered Bill not found", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f07.*"
+  },
+{
+    "name": "Modal window is visible but should be not", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f10.*"
+  },
+{
+    "name": "Empty lines alert is visible but should be not", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f11.*"
+  },
+{
+    "name": "The table is not displayed completely", 
+    "matchedStatuses": ["failed"],
+"messageRegex": ".*f12.*"
+  },
+ {
+    "name": "Error from NPS", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s04.*"
+  },
+ {
+    "name": "Bills payment transaction failure", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s05.*"
+  },
+ {
+    "name": "Check security permissions on core banking", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s06.*"
+  },
+ {
+    "name": "Service not found", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s08.*"
+  },
+ {
+    "name": "The timeout period has expired. Check the API!", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s09.*"
+  },
+{
+    "name": "Check the API!", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s13.*"
+  },
+{
+    "name": "Problem with retrieve additional customer data", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s14.*"
+  },
+{
+    "name": "Connection refused (FlexCube)", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s15.*"
+  },
+{
+    "name": "Can not start on qa environment", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s16.*"
+  },
+{
+    "name": "Error evaluating UI expression", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s17.*"
+  },
+{
+    "name": "Block amount integration was unsuccessful", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s18.*"
+  },
+{
+    "name": "Transfer amount is not blocked", 
+    "matchedStatuses": ["skipped"],
+"messageRegex": ".*s19.*"
+  },
+{
+    "name": "Test defects", 
+    "matchedStatuses": ["broken"]
+  }
+]

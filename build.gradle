@@ -1,0 +1,66 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'io.qameta.allure'
+
+group 'LeadexSystems'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/core']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test/examples']
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:+")
+        classpath "io.qameta.allure:allure-gradle:+"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.6.0'
+    compile group: 'com.codeborne', name: 'selenide', version: '4.12.3'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
+
+    // video recorder / encoder
+    compile group: 'com.automation-remarks', name: 'video-recorder-core', version: '1.7'
+    compile group: 'com.automation-remarks', name: 'video-recorder-junit', version: '1.7'
+    compile group: 'net.bramp.ffmpeg', name: 'ffmpeg', version: '0.6.2'
+}
+
+allure {
+    version = '2.7.0'
+    autoconfigure = true
+    aspectjweaver = true
+    useJUnit4 {
+        version = '2.0-BETA22'
+    }
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
